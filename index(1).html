@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saffron Table — Modern Indian Fine Dining</title>
+<meta name="description" content="Saffron Table — Modern Indian fine dining in Mumbai.">
+<style>
+:root{
+  --cream:#f7f3e9; --white:#fffdf8; --sage:#9aa889; --sage-dark:#6f7f60;
+  --ink:#283126; --gold:#a47a3b; --line:#ddd7c9;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif}
+h1,h2,h3,.brand{font-family:Georgia,serif;font-weight:400}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:25px;color:#8d642e}.brand small{display:block;font:9px Arial;letter-spacing:2px;color:var(--ink);margin-top:3px}
+.navlinks{display:flex;gap:28px;font-size:12px;letter-spacing:1px}.navlinks a:hover{color:var(--sage-dark)}
+.cta{background:var(--sage-dark);color:white;padding:12px 20px;border-radius:25px;font-size:12px;letter-spacing:.8px}
+.hero{max-width:1180px;margin:auto;min-height:650px;display:grid;grid-template-columns:1fr 1.08fr;align-items:center;padding:55px 24px;gap:45px}
+.eyebrow{letter-spacing:5px;color:var(--gold);font-size:12px}.hero h1{font-size:76px;line-height:.95;margin:18px 0 8px}.hero h2{font-size:28px;margin:0 0 22px}.hero p{max-width:520px;line-height:1.8;color:#596055}
+.actions{display:flex;gap:12px;margin:28px 0}.btn{padding:14px 22px;border-radius:7px;border:1px solid var(--sage-dark);font-size:12px;letter-spacing:1px}.btn.primary{background:var(--sage-dark);color:#fff}
+.heroimg{height:520px;border-radius:160px 160px 10px 10px;background:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1100&q=85') center/cover;box-shadow:0 25px 55px #7d84601f}
+.section{padding:85px 24px}.white{background:var(--white)}
+.wrap{max-width:1050px;margin:auto}.sectionlabel{font-size:11px;letter-spacing:3px;color:var(--sage-dark)}h2.title{font-size:45px;margin:10px 0 30px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about p{line-height:1.9;color:#5d6259}
+.aboutimg{height:410px;border-radius:10px;background:url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85') center/cover}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 10px 25px #6661}
+.card img{width:100%;height:170px;object-fit:cover}.cardbody{padding:18px}.card h3{margin:0 0 8px;font-size:20px}.card p{font-size:12px;line-height:1.6;color:#6b7068}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:55px;border:1px solid var(--line)}.info div{background:var(--white);padding:25px}.info b{font-size:11px;letter-spacing:1.5px}.info p{font-size:13px;line-height:1.6}
+footer{background:#eef0e8;padding:45px 24px;text-align:center}.footerbrand{font:27px Georgia;color:#8d642e}.copy{font-size:11px;color:#697064;margin-top:20px}
+.chat-button{position:fixed;right:20px;bottom:20px;z-index:30;background:var(--sage-dark);color:#fff;border:0;border-radius:28px;padding:15px 20px;box-shadow:0 12px 30px #0003;cursor:pointer}
+.chat{position:fixed;right:20px;bottom:78px;width:350px;max-width:calc(100vw - 30px);height:500px;background:#fffdf8;border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 60px #0003;z-index:31;display:none;overflow:hidden}
+.chat.open{display:flex;flex-direction:column}.chathead{background:var(--sage-dark);color:#fff;padding:17px 18px;display:flex;justify-content:space-between}.chathead b{font-size:14px}.close{background:none;border:0;color:white;font-size:20px;cursor:pointer}
+.messages{padding:15px;flex:1;overflow:auto;background:#f8f5ec}.msg{max-width:85%;padding:10px 12px;border-radius:13px;margin:7px 0;font-size:13px;line-height:1.45}.bot{background:#fff;border:1px solid var(--line)}.user{margin-left:auto;background:var(--sage-dark);color:white}
+.quick{display:flex;flex-wrap:wrap;gap:7px;padding:10px;border-top:1px solid var(--line)}.quick button{border:1px solid var(--sage);background:white;border-radius:18px;padding:7px 10px;font-size:11px;cursor:pointer}
+.input{display:flex;padding:10px;border-top:1px solid var(--line);gap:7px}.input input{flex:1;border:1px solid var(--line);border-radius:20px;padding:10px}.input button{border:0;background:var(--sage-dark);color:white;border-radius:50%;width:40px}
+@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:35px}.hero h1{font-size:55px}.heroimg{height:380px}.about{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr}.section{padding:65px 18px}}
+@media(max-width:480px){.cards{grid-template-columns:1fr}.hero{gap:25px}.heroimg{height:330px}.cta{display:none}}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+<a class="brand" href="#">Saffron Table<small>MODERN INDIAN FINE DINING</small></a>
+<div class="navlinks"><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
+<a class="cta" href="#contact">RESERVE A TABLE</a>
+</nav></header>
+
+<main>
+<section class="hero">
+<div>
+<div class="eyebrow">EST. 2012 · BANDRA WEST, MUMBAI</div>
+<h1>Saffron Table</h1><h2>Modern Indian Fine Dining</h2>
+<p>Timeless recipes. Contemporary experience. Discover Indian flavours reimagined with thoughtful ingredients, elegant presentation and warm hospitality.</p>
+<div class="actions"><a class="btn primary" href="#menu">VIEW MENU</a><a class="btn" href="#contact">RESERVE A TABLE</a></div>
+</div>
+<div class="heroimg" aria-label="Indian fine dining dish"></div>
+</section>
+
+<section id="about" class="section white"><div class="wrap about">
+<div><div class="sectionlabel">OUR STORY</div><h2 class="title">A table made for memorable moments.</h2>
+<p>Saffron Table brings the richness of Indian cuisine into a refined modern dining experience. Every plate balances familiar flavours with contemporary technique.</p>
+<a class="btn primary" href="#menu">EXPLORE OUR MENU</a></div>
+<div class="aboutimg"></div></div></section>
+
+<section id="menu" class="section"><div class="wrap">
+<div class="sectionlabel">CHEF'S SPECIAL</div><h2 class="title">Signature Dishes</h2>
+<div class="cards">
+<article class="card"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=700&q=85"><div class="cardbody"><h3>Royal Dum Biryani</h3><p>Fragrant basmati rice, aromatic spices and slow-cooked perfection.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=85"><div class="cardbody"><h3>Kasundi Prawns</h3><p>Mustard-marinated prawns finished with a delicate modern touch.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=85"><div class="cardbody"><h3>Paneer Lababdar</h3><p>Cottage cheese in a rich, creamy tomato and cashew gravy.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=700&q=85"><div class="cardbody"><h3>Kulfi Falooda</h3><p>Traditional kulfi layered with rose syrup and delicate garnish.</p></div></article>
+</div></div></section>
+
+<section id="experience" class="section white"><div class="wrap"><div class="sectionlabel">THE EXPERIENCE</div><h2 class="title">Everything you need, one conversation away.</h2><p style="max-width:650px;line-height:1.8;color:#5d6259">Use the AI assistant to ask about our menu, opening hours, location, vegetarian options or reservations.</p>
+<div class="info"><div><b>OPENING HOURS</b><p>Mon – Sun<br>12:00 PM – 11:00 PM</p></div><div><b>LOCATION</b><p>Bandra West, Mumbai<br>Maharashtra 400050</p></div><div><b>RESERVATIONS</b><p>+91 98765 43210<br>hello@saffrontable.com</p></div></div></div></section>
+
+<section id="contact" class="section"><div class="wrap" style="text-align:center"><div class="sectionlabel">JOIN US</div><h2 class="title">Your table is waiting.</h2><p>For reservations, call us or chat with our AI assistant.</p><a class="btn primary" href="tel:+919876543210">CALL TO RESERVE</a></div></section>
+</main>
+<footer><div class="footerbrand">Saffron Table</div><div class="copy">© 2026 Saffron Table · Modern Indian Fine Dining · Mumbai</div></footer>
+
+<button class="chat-button" onclick="toggleChat()">💬 Chat with AI</button>
+<div class="chat" id="chat">
+<div class="chathead"><b>🌿 Saffron Table AI</b><button class="close" onclick="toggleChat()">×</button></div>
+<div class="messages" id="messages"><div class="msg bot">Hi! 👋 I'm Saffron Table's AI assistant. How can I help you today?</div></div>
+<div class="quick">
+<button onclick="ask('View Menu')">View Menu</button><button onclick="ask('Opening Hours')">Opening Hours</button><button onclick="ask('Location')">Location</button><button onclick="ask('Make a Reservation')">Reservation</button><button onclick="ask('Vegetarian Options')">Vegetarian</button>
+</div>
+<div class="input"><input id="input" placeholder="Type your message..." onkeydown="if(event.key==='Enter')send()"><button onclick="send()">➤</button></div>
+</div>
+<script>
+const replies={
+"view menu":"Our signature dishes include Royal Dum Biryani, Kasundi Prawns, Paneer Lababdar and Kulfi Falooda. Ask about any dish for details.",
+"opening hours":"We're open Monday to Sunday, 12:00 PM to 11:00 PM.",
+"location":"We're in Bandra West, Mumbai, Maharashtra 400050.",
+"make a reservation":"I'd be happy to help. Please call +91 98765 43210 or use the reservation button on the website.",
+"vegetarian options":"Yes! We have vegetarian options including Paneer Lababdar and other seasonal vegetarian dishes.",
+"popular dishes":"Our popular choices are Royal Dum Biryani, Kasundi Prawns and Paneer Lababdar.",
+"hello":"Hello! 👋 Welcome to Saffron Table. Ask me about our menu, hours, location or reservations."
+};
+function toggleChat(){document.getElementById('chat').classList.toggle('open')}
+function add(text,who){let d=document.createElement('div');d.className='msg '+who;d.textContent=text;document.getElementById('messages').appendChild(d);document.getElementById('messages').scrollTop=99999}
+function ask(text){add(text,'user');setTimeout(()=>respond(text),250)}
+function respond(text){let t=text.toLowerCase(),r='I can help with our menu, opening hours, location, vegetarian options or reservations. What would you like to know?';for(let k in replies)if(t.includes(k))r=replies[k];add(r,'bot')}
+function send(){let i=document.getElementById('input'),t=i.value.trim();if(!t)return;ask(t);i.value=''}
+</script>
+</body>
+</html>
