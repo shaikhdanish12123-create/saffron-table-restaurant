@@ -3,168 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saffron Table — Muscat</title>
-<meta name="description" content="Saffron Table — a premium Indian, Arabian and Continental dining experience in Muscat, Oman.">
+<title>Maison Café — Artisan Coffee & Dining</title>
+<meta name="description" content="Maison Café — artisan coffee, handcrafted food and an elegant dining experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#241f1b;--cream:#f7f1e8;--paper:#fcfaf6;--gold:#b28a4b;--muted:#776f66;--line:#ded5c8}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{display:block;width:100%;object-fit:cover}
-.container{width:min(1160px,92%);margin:auto}
-.nav{position:fixed;z-index:20;top:0;left:0;right:0;padding:18px 0;transition:.3s;color:#fff}
-.nav.scrolled{background:rgba(36,31,27,.95);backdrop-filter:blur(10px);padding:12px 0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:"Cormorant Garamond",serif;font-size:29px;letter-spacing:2px;font-weight:700}
-.logo span{display:block;font:10px "DM Sans";letter-spacing:4px;text-align:center;margin-top:-7px}
-.links{display:flex;gap:27px;font-size:13px;letter-spacing:.4px}
-.links a{opacity:.9}.links a:hover{color:#e7c98f}
-.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);padding:11px 19px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
-.nav-cta{background:var(--gold);color:#fff}
-.menu-btn{display:none;background:none;border:0;color:#fff;font-size:27px}
-.hero{min-height:100vh;display:grid;place-items:center;position:relative;color:#fff;background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=85") center/cover}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,15,11,.76),rgba(20,15,11,.28))}
-.hero-content{position:relative;width:min(1160px,92%);padding-top:70px}
-.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:11px;color:#e4c88e;margin-bottom:18px}
-h1,h2,h3{font-family:"Cormorant Garamond",serif;line-height:1}
-h1{font-size:clamp(58px,8vw,104px);max-width:760px;font-weight:600}
-.hero p{max-width:570px;color:#eee4d8;margin:25px 0 32px;font-size:16px}
-.btn{background:var(--gold);color:#fff;margin-right:10px}
-.btn.alt{background:transparent;border-color:#fff}
-section{padding:105px 0}
-.section-head{max-width:650px;margin-bottom:45px}
-.section-head h2{font-size:clamp(43px,5vw,65px);font-weight:600}
-.section-head p{color:var(--muted);margin-top:16px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
-.about-img{height:620px}
-.about-copy .eyebrow{color:var(--gold)}
-.about-copy h2{font-size:60px}
-.about-copy p{color:var(--muted);margin:22px 0}
-.signature{background:var(--cream)}
-.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.dish{background:var(--paper)}
-.dish img{height:285px}
-.dish-body{padding:22px 4px 15px}
-.dish-top{display:flex;justify-content:space-between;gap:12px}
-.dish h3{font-size:29px}.price{color:var(--gold);font-weight:600;font-size:13px;white-space:nowrap}
-.dish p{color:var(--muted);font-size:13px;margin-top:7px}
-.experience{padding:0;position:relative;color:#fff}
-.experience img{height:600px}
-.experience:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,19,14,.72),rgba(25,19,14,.15))}
-.experience-copy{position:absolute;z-index:2;left:7%;top:50%;transform:translateY(-50%);max-width:560px}
-.experience-copy h2{font-size:70px}.experience-copy p{margin:20px 0;color:#eee}
-.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:240px;gap:14px}
-.gallery img{height:100%}.g1{grid-row:span 2}.g4{grid-column:2/4}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:35px}
-.feature{border-top:1px solid var(--line);padding-top:20px}.feature h3{font-size:29px}.feature p{font-size:13px;color:var(--muted);margin-top:8px}
-.reviews{background:var(--ink);color:#fff}.reviews .section-head p{color:#c9c0b5}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.review{border:1px solid #4b433b;padding:30px}.stars{color:#d1aa65;letter-spacing:3px}.review p{font-family:"Cormorant Garamond";font-size:25px;margin:18px 0 25px}.review small{color:#bdb2a5}
-.booking{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:start}
-.booking h2{font-size:62px}.booking-copy p{color:var(--muted);margin:18px 0 28px}
-.form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.form input,.form textarea{width:100%;padding:15px 14px;border:1px solid var(--line);background:#fff;font:13px "DM Sans";outline:none}
-.form textarea{grid-column:1/3;min-height:110px;resize:vertical}.form button{border:0;cursor:pointer;grid-column:1/3}
-.contact{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h2{font-size:60px}.contact p{color:var(--muted);margin:12px 0}.map{min-height:300px;background:url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85") center/cover}
-footer{background:#1b1714;color:#d9d0c6;padding:50px 0}.footer-inner{display:flex;justify-content:space-between;gap:30px}.footer-logo{font:600 34px "Cormorant Garamond";letter-spacing:2px;color:#fff}.footer-inner p{font-size:12px;color:#9e958b;margin-top:7px}.social{display:flex;gap:20px;font-size:12px}
-.mobile-menu{display:none}
-@media(max-width:850px){
-.links,.nav-cta{display:none}.menu-btn{display:block}.mobile-menu.open{display:flex;position:absolute;top:67px;left:0;right:0;background:#241f1b;padding:20px;flex-direction:column;gap:17px}
-.hero{min-height:92vh}.hero-content{padding-top:90px}
-.about,.booking,.contact-grid{grid-template-columns:1fr;gap:35px}.about-img{height:440px}
-.dishes,.review-grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}
-.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:190px}.g1{grid-row:span 1}.g4{grid-column:auto}
-.experience img{height:520px}.experience-copy{left:6%;right:6%}.experience-copy h2{font-size:52px}
-.form{grid-template-columns:1fr}.form textarea,.form button{grid-column:auto}
-.footer-inner{flex-direction:column}
-}
-@media(max-width:560px){
-section{padding:75px 0}.dishes,.review-grid,.features{grid-template-columns:1fr}
-.about-copy h2,.contact h2{font-size:48px}.hero h1{font-size:58px}.hero p{font-size:14px}
-.gallery{grid-template-columns:1fr;grid-auto-rows:230px}.g1,.g4{grid-column:auto;grid-row:auto}
-.about-img{height:350px}.experience img{height:580px}
-}
+:root{--ink:#201d19;--cream:#f7f2e9;--paper:#fffdf8;--olive:#68705a;--gold:#b58a52;--line:#ded5c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+nav{position:absolute;top:0;left:0;right:0;z-index:5;color:white;display:flex;align-items:center;justify-content:space-between;padding:26px 4%}
+.logo{font-family:"Playfair Display";font-size:28px;letter-spacing:.04em}.navlinks{display:flex;gap:30px;font-size:13px;text-transform:uppercase;letter-spacing:.14em}
+.navlinks a{opacity:.9}.navlinks a:hover{opacity:1}.menu-btn{border:1px solid rgba(255,255,255,.55);padding:10px 18px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.hero{min-height:92vh;display:grid;place-items:center;text-align:center;color:white;position:relative;background:linear-gradient(rgba(20,17,13,.48),rgba(20,17,13,.58)),url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2200&q=88") center/cover}
+.hero-inner{max-width:820px;padding:130px 20px 80px}.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:12px;margin-bottom:22px;color:#f4dfbd}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600;line-height:1.08}h1{font-size:clamp(58px,9vw,108px);margin:0 0 25px}.hero p{max-width:590px;margin:0 auto 35px;font-size:17px;color:#f4eee4}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;background:#fff;color:#231f1a;font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:700;margin:5px}.btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+section{padding:110px 0}.intro{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center}.kicker{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.22em;font-weight:700}.intro h2{font-size:clamp(42px,5vw,64px);margin:15px 0 22px}.intro p{color:#635d54;max-width:520px}.signature{font-family:"Playfair Display";font-style:italic;font-size:23px;margin-top:28px}
+.photo{height:590px;background:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=88") center/cover;border-radius:2px}
+.band{background:#26241f;color:#f8f2e8}.band .container{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}.stat{padding:25px}.stat strong{font-family:"Playfair Display";font-size:42px;display:block;color:#e6c994}.stat span{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:#c8c0b3}
+.section-head{text-align:center;max-width:700px;margin:0 auto 55px}.section-head h2{font-size:clamp(42px,5vw,62px);margin:12px 0}.section-head p{color:#716a60}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.item{background:var(--paper);padding:30px}.item-top{display:flex;justify-content:space-between;gap:20px}.item h3{font-size:24px;margin:0 0 7px}.price{font-family:"Playfair Display";font-size:20px;color:var(--gold);white-space:nowrap}.item p{margin:0;color:#746d63;font-size:14px}
+.gallery{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:280px 280px;gap:14px}.gallery div{background-size:cover;background-position:center}.g1{grid-row:1/3;background-image:url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=88")}.g2{background-image:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=88")}.g3{background-image:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=88")}.g4{background-image:url("https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=88")}.g5{background-image:url("https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=88")}
+.experience{background:var(--paper)}.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.experience-img{height:620px;background:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=88") center/cover}.experience h2{font-size:56px;margin:15px 0}.experience p{color:#6f685f}.checks{margin:28px 0;padding:0;list-style:none}.checks li{padding:12px 0;border-bottom:1px solid var(--line)}.checks li:before{content:"✦";color:var(--gold);margin-right:12px}
+.reserve{position:relative;color:white;text-align:center;background:linear-gradient(rgba(28,25,20,.55),rgba(28,25,20,.65)),url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=88") center/cover}.reserve h2{font-size:64px;margin:15px 0}.reserve p{max-width:580px;margin:0 auto 30px;color:#eee6da}
+footer{background:#1e1c18;color:#cfc7ba;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px}.footer-logo{font-family:"Playfair Display";font-size:31px;color:#fff}.footer-title{text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:#fff;margin-bottom:15px}.footer-grid p,.footer-grid a{font-size:13px;color:#aaa398;display:block;margin:7px 0}.copyright{border-top:1px solid #39352f;margin-top:45px;padding-top:20px;font-size:11px;color:#827c73;display:flex;justify-content:space-between}
+@media(max-width:800px){.navlinks{display:none}.intro,.experience-grid{grid-template-columns:1fr;gap:35px}.photo{height:430px}.band .container{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:240px 240px 240px}.g1{grid-row:auto;grid-column:1/3}.g5{display:none}.experience-img{height:450px}.footer-grid{grid-template-columns:1fr 1fr}.copyright{display:block}.copyright span{display:block;margin-top:8px}section{padding:75px 0}.hero{min-height:85vh}}
 </style>
 </head>
 <body>
-<nav class="nav" id="nav">
-<div class="container nav-inner">
-<a class="logo" href="#home">SAFFRON TABLE<span>MUSCAT • OMAN</span></a>
-<div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
-<a class="nav-cta" href="#booking">Book a Table</a>
-<button class="menu-btn" id="menuBtn">☰</button>
-</div>
-<div class="mobile-menu" id="mobileMenu"><a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+<nav>
+  <div class="logo">MAISON</div>
+  <div class="navlinks"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></div>
+  <a class="menu-btn" href="#reserve">Reserve a table</a>
 </nav>
 
-<header class="hero" id="home"><div class="hero-content">
-<div class="eyebrow">Indian • Arabian • Continental</div>
-<h1>Authentic Flavours. Modern Dining.</h1>
-<p>Experience beautifully crafted dishes inspired by the rich flavours of India and Arabia, prepared with premium ingredients and served with a modern touch.</p>
-<a class="btn" href="#menu">View Menu</a><a class="btn alt" href="#booking">Book a Table</a>
-</div></header>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Coffee · Cuisine · Conversation</div>
+    <h1>A slower kind of luxury.</h1>
+    <p>Artisan coffee, seasonal plates and warm evenings — thoughtfully made for people who appreciate the little things.</p>
+    <a class="btn" href="#menu">Explore menu</a>
+    <a class="btn alt" href="#reserve">Book a table</a>
+  </div>
+</header>
 
-<section id="about"><div class="container about">
-<img class="about-img" src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1400&q=85" alt="Chef preparing food">
-<div class="about-copy"><div class="eyebrow">Our Story</div><h2>Where Tradition Meets Modern Dining</h2><p>At Saffron Table, we bring together the rich flavours of India and Arabia with contemporary culinary techniques. Every dish is prepared with carefully selected ingredients and served in an elegant and welcoming atmosphere.</p><p><strong>Fresh Ingredients</strong> • <strong>Authentic Recipes</strong> • <strong>Exceptional Hospitality</strong></p></div>
-</div></section>
+<section id="story">
+  <div class="container intro">
+    <div>
+      <div class="kicker">Our philosophy</div>
+      <h2>Good coffee.<br>Beautiful moments.</h2>
+      <p>Maison is an independent café built around a simple idea: exceptional ingredients, honest hospitality and a space you actually want to stay in.</p>
+      <p>From our first espresso in the morning to late-night conversations over dessert, everything is designed to feel effortless.</p>
+      <div class="signature">Made with intention.</div>
+    </div>
+    <div class="photo"></div>
+  </div>
+</section>
 
-<section class="signature" id="menu"><div class="container">
-<div class="section-head"><div class="eyebrow">From Our Kitchen</div><h2>Our Signature Dishes</h2><p>A selection of favourites prepared with passion and served with elegance.</p></div>
-<div class="dishes">
-<article class="dish"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85" alt="Butter chicken"><div class="dish-body"><div class="dish-top"><h3>Butter Chicken</h3><span class="price">OMR 4.500</span></div><p>Creamy tomato-based curry with aromatic spices.</p></div></article>
-<article class="dish"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=85" alt="Chicken biryani"><div class="dish-body"><div class="dish-top"><h3>Chicken Biryani</h3><span class="price">OMR 3.900</span></div><p>Fragrant basmati rice layered with tender chicken and traditional spices.</p></div></article>
-<article class="dish"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Grilled platter"><div class="dish-body"><div class="dish-top"><h3>Grilled Platter</h3><span class="price">OMR 6.500</span></div><p>A selection of perfectly grilled meats served with fresh sides.</p></div></article>
-<article class="dish"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85" alt="Truffle pasta"><div class="dish-body"><div class="dish-top"><h3>Truffle Pasta</h3><span class="price">OMR 5.200</span></div><p>Creamy pasta finished with parmesan and delicate truffle essence.</p></div></article>
-<article class="dish"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=85" alt="Kunafa dessert"><div class="dish-body"><div class="dish-top"><h3>Kunafa</h3><span class="price">OMR 2.500</span></div><p>Crispy golden pastry with sweet cheese and delicate syrup.</p></div></article>
-<article class="dish"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85" alt="Mango cheesecake"><div class="dish-body"><div class="dish-top"><h3>Mango Cheesecake</h3><span class="price">OMR 2.800</span></div><p>Creamy cheesecake with fresh mango and a light biscuit base.</p></div></article>
-</div></div></section>
+<section class="band">
+  <div class="container">
+    <div class="stat"><strong>2018</strong><span>Since we opened</span></div>
+    <div class="stat"><strong>24+</strong><span>Seasonal dishes</span></div>
+    <div class="stat"><strong>100%</strong><span>Made with care</span></div>
+  </div>
+</section>
 
-<section class="experience"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=85" alt="Elegant restaurant interior"><div class="experience-copy"><div class="eyebrow">The Saffron Experience</div><h2>More Than Just a Meal</h2><p>From the first welcome to the final bite, every detail at Saffron Table is designed to make your dining experience memorable.</p></div></section>
+<section id="menu">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The menu</div>
+      <h2>Simple. Seasonal. Special.</h2>
+      <p>A concise menu that changes with the seasons, built around quality produce and our favourite coffee.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="item"><div class="item-top"><div><h3>Truffle Mushroom Toast</h3><p>Sourdough · wild mushrooms · parmesan · herbs</p></div><div class="price">$14</div></div></article>
+      <article class="item"><div class="item-top"><div><h3>Maison Breakfast</h3><p>Eggs · avocado · sourdough · roasted tomato</p></div><div class="price">$16</div></div></article>
+      <article class="item"><div class="item-top"><div><h3>Honey Ricotta Pancakes</h3><p>Whipped ricotta · berries · maple · pistachio</p></div><div class="price">$15</div></div></article>
+      <article class="item"><div class="item-top"><div><h3>Roasted Chicken Bowl</h3><p>Herbed rice · greens · tahini · pickled onion</p></div><div class="price">$18</div></div></article>
+      <article class="item"><div class="item-top"><div><h3>Flat White</h3><p>Double espresso · silky steamed milk</p></div><div class="price">$5</div></div></article>
+      <article class="item"><div class="item-top"><div><h3>Signature Tiramisu</h3><p>Mascarpone · espresso · cocoa · dark chocolate</p></div><div class="price">$9</div></div></article>
+    </div>
+  </div>
+</section>
 
-<section><div class="container"><div class="section-head"><div class="eyebrow">Why Saffron Table</div><h2>An Experience Worth Remembering</h2></div><div class="features">
-<div class="feature"><h3>Fresh & Premium</h3><p>Carefully selected ingredients, prepared fresh for every table.</p></div>
-<div class="feature"><h3>Authentic Recipes</h3><p>Time-honoured flavours brought to life with a contemporary touch.</p></div>
-<div class="feature"><h3>Elegant Atmosphere</h3><p>A warm, refined setting for relaxed lunches and special evenings.</p></div>
-<div class="feature"><h3>Exceptional Service</h3><p>Thoughtful hospitality from the moment you arrive.</p></div>
-</div></div></section>
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Inside Maison</div>
+      <h2>Come for the coffee.<br>Stay for the feeling.</h2>
+    </div>
+    <div class="gallery"><div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div><div class="g5"></div></div>
+  </div>
+</section>
 
-<section id="gallery"><div class="container"><div class="section-head"><div class="eyebrow">A Glimpse Inside</div><h2>Gallery</h2><p>Food, people and moments from the Saffron Table experience.</p></div>
-<div class="gallery">
-<img class="g1" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85" alt="Restaurant interior">
-<img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85" alt="Dining room">
-<img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Grilled dish">
-<img class="g4" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85" alt="Fresh food">
-<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85" alt="Chef">
-<img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85" alt="Restaurant seating">
-</div></div></section>
+<section class="experience">
+  <div class="container experience-grid">
+    <div class="experience-img"></div>
+    <div>
+      <div class="kicker">The experience</div>
+      <h2>Your table is waiting.</h2>
+      <p>Whether it is a quiet morning, a long lunch or an evening catch-up, Maison is made to fit naturally into your day.</p>
+      <ul class="checks"><li>Specialty coffee roasted weekly</li><li>Fresh seasonal ingredients</li><li>Comfortable spaces for work & conversation</li><li>Private events & intimate celebrations</li></ul>
+      <a class="btn" style="background:var(--ink);color:#fff" href="#reserve">Plan your visit</a>
+    </div>
+  </div>
+</section>
 
-<section class="reviews" id="reviews"><div class="container"><div class="section-head"><div class="eyebrow">Guest Notes</div><h2>What Our Guests Say</h2><p>Kind words from people who have shared a table with us.</p></div><div class="review-grid">
-<div class="review"><div class="stars">★★★★★</div><p>“Beautiful atmosphere, excellent service and absolutely delicious food. The biryani was outstanding.”</p><small>Ahmed R.</small></div>
-<div class="review"><div class="stars">★★★★★</div><p>“Everything from the presentation to the flavours felt premium. Definitely one of our favourite places in Muscat.”</p><small>Sara M.</small></div>
-<div class="review"><div class="stars">★★★★★</div><p>“Elegant interior, friendly staff and amazing food. Perfect for a special dinner.”</p><small>Omar K.</small></div>
-</div></div></section>
+<section id="reserve" class="reserve">
+  <div class="container">
+    <div class="kicker">Reservations</div>
+    <h2>Make it a Maison moment.</h2>
+    <p>Reserve your table for brunch, lunch or an evening of coffee, conversation and something delicious.</p>
+    <a class="btn" href="mailto:hello@maisoncafe.example?subject=Table%20Reservation">Reserve a table</a>
+  </div>
+</section>
 
-<section id="booking"><div class="container booking"><div class="booking-copy"><div class="eyebrow">Reservations</div><h2>Reserve Your Table</h2><p>Planning a special evening? Reserve your table and let us take care of the rest.</p><p><strong>Monday–Thursday</strong><br>11:00 AM – 11:00 PM<br><br><strong>Friday–Sunday</strong><br>11:00 AM – 12:00 AM</p></div>
-<form class="form" onsubmit="event.preventDefault(); alert('Thank you! Your reservation request has been received.');">
-<input required placeholder="Name"><input required placeholder="Phone Number"><input required type="date"><input required type="time"><input required type="number" min="1" max="20" placeholder="Number of Guests"><input placeholder="Special Request"><textarea placeholder="Anything else we should know?"></textarea><button class="btn" type="submit">Book My Table</button>
-</form></div></section>
-
-<section class="contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow">Find Us</div><h2>Visit Saffron Table</h2><p>Muscat, Oman</p><p>+968 24 567 890</p><p>hello@saffrontable.com</p><p>11:00 AM – 11:00 PM • Fri–Sun until midnight</p></div><div class="map" aria-label="Restaurant atmosphere image"></div></div></section>
-
-<footer><div class="container footer-inner"><div><div class="footer-logo">SAFFRON TABLE</div><p>A Taste of Tradition, Served with Elegance.</p><p>© 2026 Saffron Table. All rights reserved.</p></div><div class="social"><a href="#">Instagram</a><a href="#">Facebook</a></div></div></footer>
-
-<script>
-const nav=document.getElementById('nav');
-const menuBtn=document.getElementById('menuBtn');
-const mobile=document.getElementById('mobileMenu');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
-menuBtn.addEventListener('click',()=>mobile.classList.toggle('open'));
-mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
-</script>
+<footer id="visit">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">MAISON</div><p>Artisan café & seasonal kitchen.</p></div>
+    <div><div class="footer-title">Visit</div><p>24 Olive Street</p><p>Downtown</p><p>Mon–Sun · 8am–10pm</p></div>
+    <div><div class="footer-title">Contact</div><a href="mailto:hello@maisoncafe.example">hello@maisoncafe.example</a><a href="tel:+10000000000">+1 000 000 0000</a></div>
+    <div><div class="footer-title">Follow</div><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+  </div>
+  <div class="container copyright"><span>© 2026 Maison Café. Demo website.</span><span>Crafted for a premium café experience.</span></div>
+</footer>
 </body>
 </html>
